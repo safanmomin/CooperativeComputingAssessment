@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#CDA16A</color>
+    <color name="colorPrimaryDark">#CDA16A</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <string name="delete_text">X</string>
+    <color name="colorBackground">#FCDAB0</color>
+    <color name="colorBottomBackground">#CDA16A</color>
+    <color name="colorCircleStroke">#df9502</color>
+    <color name="colorSubTitle">#38455B</color>
+    <color name="textColor">#5B4224</color>
+</resources>

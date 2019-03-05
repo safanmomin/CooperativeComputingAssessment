@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context="com.example.ccapp.WeatherActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/city_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="@string/city_country"
+                android:textSize="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textColor="@color/textColor"/>
+
+            <TextView
+                android:id="@+id/current_date"
+                android:layout_below="@+id/city_country"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="@string/date_today"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="@color/textColor"/>
+
+            <Button
+                android:id="@+id/popularRestaurants"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/shape"
+                android:text="@string/pr"
+                android:textSize="18sp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <ImageView
+                android:id="@+id/weather_icon"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/sun"
+                android:layout_marginTop="@dimen/_24sdp"/>
+
+            <com.github.pavlospt.CircleView
+                android:id="@+id/weather_result"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                app:cv_backgroundColorValue="@color/colorCircleStroke"
+                app:cv_fillColor="@color/colorBackground"
+                app:cv_strokeColorValue="@color/colorCircleStroke"
+                app:cv_subtitleColor="@color/textColor"
+                app:cv_subtitleSize="@dimen/_12sdp"
+                app:cv_subtitleText="@string/weather_information"
+                app:cv_titleColor="@color/textColor"
+                app:cv_titleSize="@dimen/_50sdp"
+                app:cv_titleSubtitleSpace="40"
+                app:cv_titleText="@string/current_temperature" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_16sdp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorSubTitle"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:text="@string/wind"/>
+
+                <TextView
+                    android:id="@+id/wind_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@string/wind_speed"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/_16sdp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorSubTitle"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:text="@string/humidity"/>
+
+                <TextView
+                    android:id="@+id/humidity_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@string/humidity_rate"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/colorBottomBackground"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/weather_daily_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:scrollbars="none"/>
+
+    </LinearLayout>
+
+</LinearLayout>
